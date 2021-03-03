@@ -1,0 +1,24 @@
+
+<ion-content>
+  <ion-list *ngFor="let pravachanaudio of PravachanAudio">
+    <ion-item-sliding>
+      <ion-item lines="none">
+        <ion-card>
+
+        <div class="div_20">
+          <img src="{{pravachanaudio.image}}" />
+        </div>
+        <ion-label class="label"> {{pravachanaudio.title}}</ion-label>
+        </ion-card>
+      </ion-item>
+      <ion-item-options side="end">
+        <button ion-button (click)="addtoplaylistpravachanaudio(pravachanaudio)">
+          <ion-icon class="icon-inner" slot="icon-only" name="musical-note"></ion-icon>
+        </button>
+        <button ion-button (click)="addtodownloadlistpravachanaudio(pravachanaudio)">
+          <ion-icon class="icon-inner" slot="icon-only" name="download"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

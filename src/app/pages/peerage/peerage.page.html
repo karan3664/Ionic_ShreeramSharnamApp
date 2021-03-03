@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+    <ion-label>
+      Peerage
+    </ion-label>
+    <img slot="end" class="img1" src="assets/images/toolbar.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p class="p">
+    हमारे उदार गुरुजनों ने जीवन भर अपनी अध्यात्मिक कमाई बांटी ही बांटी. जीवन भर
+    दिया ही दिया, कभी कुछ नहीं लिया . हमारी पीडाएं शांत हों और कठिनाइयाँ दूर हों
+    इस हेतु रातों को नहीं के बराबर सोते हैं. हम सुखी रहें इस में इनको संतोष
+    मिलता है हमारा परलोक सुधरना चाहिए. इस हेतु मार्गदर्शन से लेकर शक्तिपात तक
+    करते हैं.ऐसे संतो के चरणों में पहुँच कर हमने जो नाम दीक्षा ली है उसकी अगर
+    परवाह नहीं की, माला व् अमृतवाणी को ऐसे ही इधर उधर डाल दिया तो जीवन की ऐसी
+    भूल होगी जिसका प्राश्चित भी क्या हो? हमारे तीनो गुरुजन अखंड ब्रह्मचारी हैं,
+    इन्होंने सांसारिक भोग विलास से अपने को सर्वथा अलग रखा अवं चरित्र निर्माण,
+    सेवा व् सिमरन इनके जीवन से परिलक्षित होता रहता है.
+  </p>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col (click)="peerage_one()">
+        <img src="assets/images/images/peerage01.jpg" />
+        <label  class="label">Shree Swami Satyanand Ji Maharaj</label>
+      </ion-col>
+      <ion-col (click)="peerage_two()">
+        <img src="assets/images/images/peerage02.jpg" />
+        <label  class="label">Shree Prem Ji Maharaj</label>
+      </ion-col>
+      <ion-col (click)="peerage_three()">
+        <img src="assets/images/images/peerage03.jpg" />
+        <label  class="label">Shree Vishwa Mitter Ji Maharaj</label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div>
+    <p class="p">
+      GURU - the Spiritual Mentor acts as a bridge with the GOD
+    </p>
+  </div>
+</ion-content>

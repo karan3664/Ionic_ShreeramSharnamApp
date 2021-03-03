@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+    <ion-label>
+      E - Books
+    </ion-label>
+    <img slot="end" class="img1" src="assets/images/toolbar.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+
+    
+  <ion-list *ngFor="let  book of Books" (click)="downloadandopenbook(book.url,book.title)">
+
+  <ion-item>
+    <div class="div_20">
+      <!-- <img src="{{prayerCentres.image}}" placeholder='assets/images/ram_text.png' /> -->
+      <!-- <img src="{{prayerCentres.image}} || assets/images/ram_text.png"/> -->
+      <img src="{{book.image}}">
+
+    </div>
+    <ion-label class="label">
+      {{book.title}}
+    </ion-label>
+  </ion-item>
+  </ion-list>
+</ion-content>

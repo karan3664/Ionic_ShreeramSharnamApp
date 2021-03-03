@@ -1,0 +1,17 @@
+ion-slides {
+    // For Customize Bullets
+    .swiper-pagination-bullet {
+      margin: 0 10px !important;
+      width: 8px !important;
+      height: 8px !important;
+      border-radius: 10px !important;
+      border: solid 1px #707070;
+      background: #C8C8C8;
+      opacity: 1 !important;
+    }
+    .swiper-pagination-bullet-active {
+      background: var(--ion-color-primary);
+      border: none !important;
+    }
+  }
+  

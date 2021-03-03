@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+    <ion-label>
+      News Letter
+    </ion-label>
+    <img slot="end" class="img1" src="assets/images/toolbar.png"/>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let  news of NewsLetter" (click)="downloadandopenbook(news.url,news.title)">
+        <div>
+          <img class="img" src="{{news.image}}" />
+          <ion-label color="primary">
+            {{news.title}}
+          </ion-label>
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-card *ngFor="let  news of NewsLetter">
+    <div class="div_20">
+      <img src="{{news.image}}" />
+    </div>
+    <ion-card-header>
+      {{news.title}}
+    </ion-card-header>
+  </ion-card> -->
+</ion-content>

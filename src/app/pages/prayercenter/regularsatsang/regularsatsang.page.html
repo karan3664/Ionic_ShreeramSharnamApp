@@ -1,0 +1,18 @@
+
+<ion-content>
+  <ion-list *ngFor="let prayerOther of RegularSatsangPlaces" (click)="OpenWeb(prayerOther.url)">
+    <ion-item>
+      <div class="div_20">
+        <!-- <img src="{{prayerOther.image}}" /> -->
+        <img src="{{prayerOther.image === 'null' ?   prayerOther.image : 'assets/images/ram_text.png'}}">
+
+      </div>
+
+      <ion-label class="label">
+        {{prayerOther.title}}
+      </ion-label>
+    </ion-item>
+
+
+  </ion-list>
+</ion-content>

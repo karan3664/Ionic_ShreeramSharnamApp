@@ -1,0 +1,57 @@
+{
+  "_args": [
+    [
+      "cordova-plugin-uid@1.3.0",
+      "/Volumes/D Drive/shreeramsharnamapp"
+    ]
+  ],
+  "_from": "cordova-plugin-uid@1.3.0",
+  "_id": "cordova-plugin-uid@1.3.0",
+  "_inBundle": false,
+  "_integrity": "sha1-yg0RZXtuc2JVhViGZeBvR63UCVw=",
+  "_location": "/cordova-plugin-uid",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-plugin-uid@1.3.0",
+    "name": "cordova-plugin-uid",
+    "escapedName": "cordova-plugin-uid",
+    "rawSpec": "1.3.0",
+    "saveSpec": null,
+    "fetchSpec": "1.3.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-uid/-/cordova-plugin-uid-1.3.0.tgz",
+  "_spec": "1.3.0",
+  "_where": "/Volumes/D Drive/shreeramsharnamapp",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/lionelhe/cordova-plugin-uid/issues"
+  },
+  "description": "Cordova plugin to get unique identifiers: UUID, IMEI, IMSI, ICCID and MAC.",
+  "homepage": "https://github.com/lionelhe/cordova-plugin-uid#readme",
+  "keywords": [
+    "cordova",
+    "uid",
+    "imei",
+    "imsi",
+    "uuid",
+    "sim",
+    "iccid",
+    "mac"
+  ],
+  "license": "MIT",
+  "main": "www/uid.js",
+  "name": "cordova-plugin-uid",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lionelhe/cordova-plugin-uid.git"
+  },
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "version": "1.3.0"
+}

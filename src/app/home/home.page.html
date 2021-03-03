@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+    <ion-label>
+      Shree Ram Sharnam
+    </ion-label>
+    <img slot="end" class="img" src="assets/images/toolbar.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" class="card-background-page" class="custom_grid cust_col">
+  <app-slides></app-slides>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col (click)="peerage()">
+        <div class="cust_border">Peerage</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" (click)="dhuns()">
+        <div class="cust_border">Dhuns</div>
+      </ion-col>
+      <ion-col size="8" (click)="shreeAmritvani()">
+        <div class="cust_border">Shree Amritvani</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8" (click)="SadhnaSatsang()">
+        <div class="cust_border">Sadhna Satsang</div>
+      </ion-col>
+      <ion-col size="4" (click)="pravachan()">
+        <div class="cust_border">Pravachan</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" (click)="Bhajans()">
+        <div class="cust_border">Bhajans</div>
+      </ion-col>
+      <ion-col size="8" (click)="JaapCount()">
+        <div class="cust_border">Jaap Count</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div>
+    <p class="p">
+      Copyright © Shree Ram Sharnam, International Spiritual Centre,8A, Ring
+      Road, Lajpat Nagar-IV, New Delhi-110 024, INDIA www.shreeramsharnam.org
+    </p>
+  </div>
+</ion-content>

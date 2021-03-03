@@ -1,0 +1,23 @@
+.div_20 {
+  width: 20%;
+  display: inline-block;
+  margin: 0px;
+  padding: 5px;
+  float: left;
+}
+  .p{
+    font-size: 12px;
+    color: var(--ion-color-primary);
+    text-align: center;
+}
+.img {
+  height: 30vh !important;
+  width: auto !important;
+  align-items: center;
+}
+.img1 {
+  height: 30px;
+  width: 100px;
+  max-width: 100%;
+  border: 0;
+}

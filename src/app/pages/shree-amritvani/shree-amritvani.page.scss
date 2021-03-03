@@ -1,0 +1,53 @@
+.div_80 {
+  float: left;
+  width: 80%;
+}
+
+.div_20 {
+  float: left;
+  width: 20%;
+}
+.img-wrapper {
+  min-height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.p {
+  font-size: 15px;
+  color: var(--ion-color-tertiary);
+  margin: 10px;
+}
+.pp {
+  font-size: 12px;
+  color: var(--ion-color-dark);
+  margin: 10px;
+}
+.ion-gird {
+  margin: 15px;
+}
+
+.img {
+height: 20vh !important;
+width: auto !important;
+align-items: center;
+}
+.img1 {
+  height: 30px;
+  width: 100px;
+  max-width: 100%;
+  border: 0;
+}
+ion-card {
+  width: 100%;
+  margin-top: 11px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+.list-ios {
+  margin-bottom: 0px !important;
+}
+ion-list {
+  padding: 0px;
+}

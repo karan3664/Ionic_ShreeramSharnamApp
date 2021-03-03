@@ -1,0 +1,32 @@
+.p{
+    font-size: 12px;
+    margin: 10px;
+    text-align: center;
+    color: var(--ion-color-dark);
+}
+.pp{
+    font-size: 15px;
+    margin: 10px;
+    text-align: center;
+    color: var(--ion-color-tertiary);
+}
+.img1 {
+    height: 30px;
+    width: 100px;
+    max-width: 100%;
+    border: 0;
+  }
+  // ion-card {
+  //   width: 100%;
+  //   margin-top: 11px;
+  //   margin-bottom: 6px;
+  //   display: flex;
+  //   align-items: center;
+  // }
+  .list-ios {
+    margin-bottom: 0px !important;
+  }
+  ion-list {
+    padding: 0px;
+  }
+  

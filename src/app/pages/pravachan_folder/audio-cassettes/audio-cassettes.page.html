@@ -1,0 +1,26 @@
+
+<ion-content>
+  <ion-list *ngFor="let pravachanCassettes of SadnaSatsang">
+    <ion-item-sliding>
+      <ion-item lines="none">
+        <ion-card>
+
+        <div class="div_20">
+          <img src="{{ pravachanCassettes.image }}" />
+        </div>
+        <ion-label class="label">
+          {{pravachanCassettes.title}}
+        </ion-label>
+        </ion-card>
+      </ion-item>
+      <ion-item-options side="end">
+        <button ion-button (click)="addtoplaylist(pravachanCassettes)">
+          <ion-icon class="icon-inner" slot="icon-only" name="musical-note"></ion-icon>
+        </button>
+        <button ion-button (click)="addtodownloadlist(pravachanCassettes)">
+          <ion-icon class="icon-inner" slot="icon-only" name="download"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

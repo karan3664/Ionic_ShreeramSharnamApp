@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+    <ion-label>
+      Bhajans Downloadlist
+    </ion-label>
+    <img slot="end" class="img1" src="assets/images/toolbar.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab  *ngFor="let audiodata of Bhajans" vertical="center" horizontal="end" edge slot="fixed" (click)="downloadAllBhajans()">
+    <ion-fab-button color="primary">
+      <ion-icon name="download"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-list *ngFor="let audiodata of Bhajans">
+    <ion-item-sliding>
+      <ion-item lines="none">
+        <ion-card>
+
+        <div class="div_20">
+          <img src="{{audiodata.image}}" />
+        </div>
+        <ion-label class="label">
+          {{audiodata.title}}
+        </ion-label>
+      </ion-card>
+      </ion-item>
+      <ion-item-options side="end">
+        <button ion-button (click)="removeplaylistdhuns(audiodata)">
+          <ion-icon class="icon-inner" slot="icon-only" name="trash"></ion-icon>
+        </button>
+
+        <button ion-button (click)="downloadplaylistdhuns(audiodata)">
+            <ion-icon class="icon-inner" slot="icon-only" name="download"></ion-icon>
+          </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+
+<ion-footer *ngIf="activeTrack">
+  <ion-toolbar color="dark">
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        {{activeTrack.title}}
+      </ion-col>
+      <ion-col size="12">
+        <ion-range
+          #range
+          [(ngModel)]="progress"
+          max="100"
+          color="primary"
+          (touchend)="seek()"
+          (mouseup)="seek()"
+        ></ion-range>
+        <!-- <div class="rangePlaytime">
+          <ion-label class="startTime" color="light">{{ display_position }}</ion-label>
+          <ion-label class="endTime" color="light" *ngIf="duration == -1">--:--</ion-label>
+          <ion-label class="endTime" color="light" *ngIf="duration != -1">{{ display_duration }}</ion-label>
+        </div> -->
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button fill="clear" (click)="prev()" color="primary">
+          <ion-icon slot="icon-only" name="skip-backward"></ion-icon>
+        </ion-button>
+        <ion-button
+          fill="clear"
+          (click)="togglePlayer(false)"
+          *ngIf="!isPlaying"
+          color="primary"
+        >
+          <ion-icon slot="icon-only" name="play"></ion-icon>
+        </ion-button>
+        <ion-button
+          fill="clear"
+          (click)="togglePlayer(true)"
+          *ngIf="isPlaying"
+          color="primary"
+        >
+          <ion-icon slot="icon-only" name="pause"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" (click)="next()" color="primary">
+          <ion-icon slot="icon-only" name="skip-forward"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

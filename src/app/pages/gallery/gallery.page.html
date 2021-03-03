@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+    <ion-label>
+      Gallery
+    </ion-label>
+    <img slot="end" class="img1" src="assets/images/toolbar.png"/>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeXs="4" *ngFor="let img_gallery of Wallpaper" (click)="OpenImage(img_gallery.image)">
+        <img src="{{img_gallery.image}}" />
+       
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

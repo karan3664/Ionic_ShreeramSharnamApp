@@ -1,0 +1,94 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com-sarriaroman-photoviewer": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "com.moust.cordova.videoplayer": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-document-viewer": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-dreamover-uid": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-fcm-with-dependecy-updated": {
+      "FCM_CORE_VERSION": "16.0.9",
+      "FCM_VERSION": "18.0.0",
+      "GRADLE_TOOLS_VERSION": "3.5.0",
+      "GOOGLE_SERVICES_VERSION": "4.2.0",
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-file-downloader": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-file-opener2": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-streaming-media": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-unique-device-id2": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-zip": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    },
+    "cordova-plugin-file-md5": {
+      "PACKAGE_NAME": "swami.satyanand.dharmarth.trust.shreeramsharnam"
+    }
+  }
+}

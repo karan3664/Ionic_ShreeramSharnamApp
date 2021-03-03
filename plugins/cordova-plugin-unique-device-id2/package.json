@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      "cordova-plugin-unique-device-id2@2.0.0",
+      "/Volumes/D Drive/shreeramsharnamapp"
+    ]
+  ],
+  "_from": "cordova-plugin-unique-device-id2@2.0.0",
+  "_id": "cordova-plugin-unique-device-id2@2.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-U7Y7LDThuVjekpKRHkmQ/I2EE5UG3/CtJQGGhFNSxkQVDiuTvZAIqojpEiTX+9TQNirEX5XW4Q+XVAungrKvIw==",
+  "_location": "/cordova-plugin-unique-device-id2",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-plugin-unique-device-id2@2.0.0",
+    "name": "cordova-plugin-unique-device-id2",
+    "escapedName": "cordova-plugin-unique-device-id2",
+    "rawSpec": "2.0.0",
+    "saveSpec": null,
+    "fetchSpec": "2.0.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-unique-device-id2/-/cordova-plugin-unique-device-id2-2.0.0.tgz",
+  "_spec": "2.0.0",
+  "_where": "/Volumes/D Drive/shreeramsharnamapp",
+  "author": {
+    "name": "Domonkos Pal",
+    "email": "public@dpal.hu",
+    "url": "https://github.com/Paldom"
+  },
+  "bugs": {
+    "url": "https://github.com/wizpanda/cordova-plugin-unique-device-id2/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-unique-device-id2",
+    "platforms": [
+      "ios",
+      "android",
+      "wp8"
+    ]
+  },
+  "description": "PhoneGap / Cordova unique device id (UUID) plugin for Android, iOS and Windows Phone 8.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/wizpanda/cordova-plugin-unique-device-id2",
+  "keywords": [
+    "phonegap",
+    "cordova",
+    "android",
+    "ios",
+    "wp",
+    "Windows",
+    "phone",
+    "device",
+    "id",
+    "uuid",
+    "unique"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-unique-device-id2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wizpanda/cordova-plugin-unique-device-id2.git"
+  },
+  "scripts": {
+    "postversion": "git push && git push --tags"
+  },
+  "version": "2.0.0"
+}

@@ -1,0 +1,166 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-label>
+      Pravchan Playlist
+    </ion-label>
+    <img slot="end" class="img1" src="assets/images/toolbar.png" />
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-segment mode="md" [(ngModel)]="segment" scrollable (ionChange)="onCatChange($event)">
+          <ion-segment-button value="pravachan_cassette">
+            <ion-label class="ppp">
+              Audio Cassettes
+            </ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="audio_ramaynji">
+            <ion-label class="ppp">
+              Audio Ramayanji
+            </ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="audio_cd">
+            <ion-label class="ppp">Audio Cd's</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="video">
+            <ion-label class="ppp">Video</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div [ngSwitch]="segment">
+    <div *ngSwitchCase="'pravachan_cassette'">
+      <ion-list *ngFor="let pravachanCassettes of SadnaSatsang">
+        <ion-item-sliding>
+          <ion-item lines="none" (click)="start(pravachanCassettes)">
+            <ion-card>
+
+              <div class="div_20">
+                <img src="{{ pravachanCassettes.image }}" />
+              </div>
+              <ion-label class="label">
+                {{pravachanCassettes.title}}
+              </ion-label>
+            </ion-card>
+          </ion-item>
+          <ion-item-options side="end">
+            <button ion-button (click)="removeplaylistpravachanCassettes(pravachanCassettes)">
+              <ion-icon class="icon-inner" slot="icon-only" name="trash"></ion-icon>
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </div>
+
+    <div *ngSwitchCase="'audio_ramaynji'">
+      <ion-list *ngFor="let pravachanRam of PravachanRam">
+        <ion-item-sliding>
+          <ion-item lines="none" (click)="start(pravachanRam)">
+            <ion-card>
+
+              <div class="div_20">
+                <img src="{{pravachanRam.image}}" />
+              </div>
+              <ion-label class="label">
+                {{pravachanRam.title}}
+              </ion-label>
+            </ion-card>
+          </ion-item>
+          <ion-item-options side="end">
+            <button ion-button (click)="removeplaylistpravachanRam(pravachanRam)">
+              <ion-icon class="icon-inner" slot="icon-only" name="trash"></ion-icon>
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </div>
+
+
+    <div *ngSwitchCase="'audio_cd'">
+      <ion-list *ngFor="let pravachanaudio of PravachanAudio">
+        <ion-item-sliding>
+          <ion-item lines="none" (click)="start(pravachanaudio)">
+            <ion-card>
+
+              <div class="div_20">
+                <img src="{{pravachanaudio.image}}" />
+              </div>
+              <ion-label class="label"> {{pravachanaudio.title}}</ion-label>
+            </ion-card>
+          </ion-item>
+          <ion-item-options side="end">
+            <button ion-button (click)="removeplaylistpravachanaudio(pravachanaudio)">
+              <ion-icon class="icon-inner" slot="icon-only" name="trash"></ion-icon>
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </div>
+
+    <div *ngSwitchCase="'video'">
+      <ion-list *ngFor="let pravachanvideo of PravachanVideo">
+        <ion-item-sliding>
+          <ion-item lines="none" (click)="PlayVideo(pravachanvideo.url, pravachanvideo.title)">
+            <ion-card>
+
+              <div class="div_20">
+                <img src="{{pravachanvideo.image}}" />
+              </div>
+              <ion-label class="label"> {{pravachanvideo.title}}</ion-label>
+            </ion-card>
+          </ion-item>
+          <ion-item-options side="end">
+            <button ion-button (click)="removeplaylistpravachanvideo(pravachanvideo)">
+              <ion-icon class="icon-inner" slot="icon-only" name="trash"></ion-icon>
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </div>
+
+  </div>
+</ion-content>
+
+<ion-footer *ngIf="activeTrack">
+  <ion-toolbar color="dark">
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        {{activeTrack.title}}
+      </ion-col>
+      <ion-col size="12">
+        <ion-range #range [(ngModel)]="progress" max="100" color="primary" (touchend)="seek()" (mouseup)="seek()">
+        </ion-range>
+        <div class="rangePlaytime">
+          <ion-label class="startTime" color="light">{{ display_position }}</ion-label>
+          <ion-label class="endTime" color="light" *ngIf="duration == -1">--:--</ion-label>
+          <ion-label class="endTime" color="light" *ngIf="duration != -1">{{ display_duration }}</ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button fill="clear" (click)="prev()" color="primary">
+          <ion-icon slot="icon-only" name="skip-backward"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying" color="primary">
+          <ion-icon slot="icon-only" name="play"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying" color="primary">
+          <ion-icon slot="icon-only" name="pause"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" (click)="next()" color="primary">
+          <ion-icon slot="icon-only" name="skip-forward"></ion-icon>
+        </ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

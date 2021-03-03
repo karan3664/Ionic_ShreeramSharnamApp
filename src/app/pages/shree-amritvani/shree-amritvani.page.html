@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-label>
+      Shree Amritvani
+     </ion-label>
+    <img slot="end" class="img1" src="assets/images/toolbar.png" />
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div>
+    <p *ngFor="let track of playlist" (click)="start(track)" class="p">
+      {{track.title}} - Mp3
+    </p>
+    <p class="pp"> (7.62MB) duration 43:20 sung by Smt. Prem Nijhawan</p>
+  </div>
+  <div>
+    <p (click)="PlayVideo()" class="p">
+      Shree Amritvani - MP4
+    </p>
+    <p class="pp">
+      (54MB) duration 43:23 min
+    </p>
+  </div>
+  <p (click)="DownloadPdf()" class="p">
+    Download Shree Amritvani notations for learning harmonium
+  </p>
+  <p class="pp">
+    Shree Amritvani in regional languages
+  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeXs="6" *ngFor="let amritvani of Amritvani" class="ion-padding">
+        <div>
+          <img class="img" src="{{amritvani.image}}" (click)="DownloadReadPDF(amritvani.url, amritvani.title)" />
+
+          <ion-label color="primary">
+            {{amritvani.title}}
+          </ion-label>
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p class="pp">
+    For other Regional Languages and various options visit here.
+  </p>
+</ion-content>
+<ion-footer *ngIf="activeTrack">
+  <ion-toolbar color="light">
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        {{activeTrack.title}}
+      </ion-col>
+      <ion-col size="12">
+        <ion-range #range [(ngModel)]="progress" max="100" color="primary" (touchend)="seek()" (mouseup)="seek()">
+            
+        </ion-range>
+        <!-- <ion-label color="primary" range-left>{{ time }}</ion-label>
+            <ion-label color="primary" range-right>{{ duration }}</ion-label> -->
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button fill="clear" (click)="prev()" color="primary">
+          <ion-icon slot="icon-only" name="skip-backward"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying" color="primary">
+          <ion-icon slot="icon-only" name="play"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying" color="primary">
+          <ion-icon slot="icon-only" name="pause"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" (click)="next()" color="primary">
+          <ion-icon slot="icon-only" name="skip-forward"></ion-icon>
+        </ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
